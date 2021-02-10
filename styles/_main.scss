@@ -1,0 +1,127 @@
+.subtitle {
+  color: $secondary-color;
+  font-size: 3rem;
+}
+
+/*Estilos sección de episodios*/
+.episodes {
+  background: $primary-color;
+  height: 800px;
+  h2 {
+    padding-left: 10%;
+    padding-bottom: 15px;
+    color: $bg;
+  }
+  .episodes__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    .episodes__podcast {
+      width: 40%;
+      padding-bottom: 45px;
+      img {
+        width: 485px;
+        height: 200px;
+      }
+    }
+  }
+}
+.container {
+  padding-top: 125px;
+}
+
+/*Estilos sección De dónde venimos*/
+
+.info {
+  padding-top: 0;
+}
+.container__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .phone {
+    width: 457.6px;
+    height: 660px;
+  }
+  .subtitle {
+    width: 430px;
+    height: 62px;
+  }
+  .presentation {
+    width: 500px;
+    height: 204px;
+    text-align: justify;
+    line-height: 32px;
+  }
+}
+
+/*Estilos Invitadas/os estelares*/
+.guests {
+  padding-top: 0;
+  .guests__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: 1fr 1fr 1fr;
+    .guests_img {
+      width: auto;
+      height: 320px;
+      display: flex;
+      align-content: center;
+    }
+  }
+}
+
+.guests__images {
+  .subtitle {
+    padding-bottom: 55px;
+    padding-left: 10%;
+  }
+}
+
+/*Estilos nuestros temas*/
+.topics {
+  padding-top: 0;
+}
+
+/*Estilos nuestros temas*/
+.topics {
+  .subtitle {
+    padding: 0 0 65px 10%;
+  }
+  .topics__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .legend__topics {
+      width: 150px;
+      height: 50px;
+      padding-right: 12%;
+      padding-top: 30px;
+      text-align: center;
+    }
+  }
+}
+
+/*Estilos Novedades*/
+.news {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: $primary-color;
+  h2 {
+    color: $bg;
+  }
+  .news__cta {
+    display: inline-block;
+    margin-top: 35px;
+    width: 345px;
+    height: 56px;
+    background-color: $boton-color;
+    padding: $boton-padding;
+    text-align: center;
+    text-decoration: none;
+    color: $secondary-color;
+    font-weight: bold;
+  }
+}

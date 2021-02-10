@@ -1,0 +1,326 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap");
+/*variables*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body .subtitle {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body a {
+  font-family: "IBM Plex Mono", sans-serif;
+}
+
+body p {
+  font-family: "IBM Plex Mono", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 80px 0;
+  max-width: 1200px;
+}
+
+.navbar {
+  height: 80px;
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+  position: absolute;
+  top: 0;
+}
+
+.navbar .nav__logo {
+  height: 36px;
+  width: 36px;
+}
+
+.navbar .nav__lista {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style: none;
+}
+
+.navbar .nav__lista .nav__items {
+  text-decoration: none;
+  color: #828591;
+  font-size: 1rem;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.nav__items:hover {
+  border-bottom: 2.5px solid blue;
+}
+
+.header__container {
+  margin-top: 70px;
+}
+
+.header__container .header__paragraph {
+  width: 628px;
+  height: 48px;
+  text-align: justify;
+}
+
+.header__container .header_texts {
+  width: 950px;
+  margin-left: 100px;
+}
+
+.header__container .header_texts .header__cta {
+  display: inline-block;
+  margin-top: 70px;
+  background: #00f3bb;
+  width: 226px;
+  height: 56px;
+  text-align: center;
+  padding: 20px 40px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.header__container .header__title {
+  font-size: 4rem;
+  padding-right: 1rem;
+}
+
+.header__container .header__paragraph {
+  font-size: 1rem;
+  padding: 1rem 0;
+  line-height: 30px;
+}
+
+.header__container .hello {
+  width: 152px;
+  height: 84px;
+}
+
+.header__container .world {
+  text-decoration: line-through;
+  width: 179px;
+  height: 84px;
+}
+
+.header__container .pale {
+  width: 391px;
+  height: 84px;
+}
+
+.header__container .point {
+  color: blue;
+}
+
+.subtitle {
+  color: black;
+  font-size: 3rem;
+}
+
+/*Estilos sección de episodios*/
+.episodes {
+  background: blue;
+  height: 800px;
+}
+
+.episodes h2 {
+  padding-left: 10%;
+  padding-bottom: 15px;
+  color: white;
+}
+
+.episodes .episodes__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.episodes .episodes__container .episodes__podcast {
+  width: 40%;
+  padding-bottom: 45px;
+}
+
+.episodes .episodes__container .episodes__podcast img {
+  width: 485px;
+  height: 200px;
+}
+
+.container {
+  padding-top: 125px;
+}
+
+/*Estilos sección De dónde venimos*/
+.info {
+  padding-top: 0;
+}
+
+.container__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container__info .phone {
+  width: 457.6px;
+  height: 660px;
+}
+
+.container__info .subtitle {
+  width: 430px;
+  height: 62px;
+}
+
+.container__info .presentation {
+  width: 500px;
+  height: 204px;
+  text-align: justify;
+  line-height: 32px;
+}
+
+/*Estilos Invitadas/os estelares*/
+.guests {
+  padding-top: 0;
+}
+
+.guests .guests__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.guests .guests__grid .guests_img {
+  width: auto;
+  height: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.guests__images .subtitle {
+  padding-bottom: 55px;
+  padding-left: 10%;
+}
+
+/*Estilos nuestros temas*/
+.topics {
+  padding-top: 0;
+}
+
+/*Estilos nuestros temas*/
+.topics .subtitle {
+  padding: 0 0 65px 10%;
+}
+
+.topics .topics__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topics .topics__container .legend__topics {
+  width: 150px;
+  height: 50px;
+  padding-right: 12%;
+  padding-top: 30px;
+  text-align: center;
+}
+
+/*Estilos Novedades*/
+.news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: blue;
+}
+
+.news h2 {
+  color: white;
+}
+
+.news .news__cta {
+  display: inline-block;
+  margin-top: 35px;
+  width: 345px;
+  height: 56px;
+  background-color: #00f3bb;
+  padding: 20px 40px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/*Estilos footer*/
+.footer {
+  padding: 50px 0 50px 0;
+}
+
+.footer__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__container-icons {
+  padding: 15px;
+  width: 18px;
+  height: 28px;
+}
+
+.footer__container-icons a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
