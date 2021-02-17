@@ -28,9 +28,20 @@ body p {
   max-width: 1200px;
 }
 
+header .container {
+  padding-top: 0;
+}
+
+input {
+  display: none;
+}
+
+.nav__logo {
+  height: 36px;
+  width: 36px;
+}
+
 .navbar {
-  height: 80px;
-  width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,37 +51,33 @@ body p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 50px;
-  position: absolute;
-  top: 0;
-}
-
-.navbar .nav__logo {
-  height: 36px;
-  width: 36px;
+  padding-top: 8px;
 }
 
 .navbar .nav__lista {
-  width: 45%;
+  margin: 0;
+  padding: 0;
+  width: 42%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   list-style: none;
+}
+
+.navbar .nav__lista li {
+  width: 180px;
 }
 
 .navbar .nav__lista .nav__items {
   text-decoration: none;
   color: #828591;
   font-size: 1rem;
-  padding-bottom: 5px;
+  padding: 10px 18px;
   font-weight: bold;
 }
 
 .nav__items:hover {
-  border-bottom: 2.5px solid blue;
+  border-bottom: 2.5px solid #0000ff;
 }
 
 .header__container {
@@ -115,6 +122,7 @@ body p {
 .header__container .hello {
   width: 152px;
   height: 84px;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .header__container .world {
@@ -129,7 +137,7 @@ body p {
 }
 
 .header__container .point {
-  color: blue;
+  color: #0000ff;
 }
 
 .subtitle {
@@ -139,8 +147,8 @@ body p {
 
 /*Estilos sección de episodios*/
 .episodes {
-  background: blue;
-  height: 800px;
+  background: #0000ff;
+  height: 900px;
 }
 
 .episodes h2 {
@@ -266,6 +274,7 @@ body p {
   padding-right: 12%;
   padding-top: 30px;
   text-align: center;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 /*Estilos Novedades*/
@@ -280,7 +289,7 @@ body p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: blue;
+  background: #0000ff;
 }
 
 .news h2 {
@@ -322,5 +331,259 @@ body p {
 
 .footer__container-icons a {
   text-decoration: none;
+}
+
+@media (min-width: 769px) {
+  .img__menu {
+    display: none;
+  }
+}
+
+/* Media querie tamaño 1024px*/
+@media (max-width: 1024px) {
+  .container {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 50px 0;
+  }
+  .navbar {
+    height: 80px;
+    width: 1000px;
+  }
+  .navbar .nav__lista {
+    margin-right: 30px;
+  }
+  /*Estilos sección de episodios*/
+  .episodes .episodes__container .episodes__podcast img {
+    padding-right: 40px;
+  }
+  /*Estilos Invitadas/os estelares*/
+  .guests {
+    padding-top: 0;
+  }
+  .guests .guests__grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .guests .guests__grid .guests_img {
+    width: 32rem;
+  }
+}
+
+/* Media querie tamaño 768px*/
+@media (max-width: 768px) {
+  /*Menú Hamburguesa*/
+  .img__menu {
+    width: 35px;
+    display: block;
+    margin-right: 1%;
+  }
+  .header .container .header__container {
+    margin-top: 140px;
+  }
+  .header .container .header__container .header_texts {
+    margin-left: 45px;
+  }
+  .header .container label {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    float: right;
+    height: 80px;
+    padding: 0px 10px 0 0;
+    margin-left: 685px;
+  }
+  .header .container input {
+    float: right;
+  }
+  .navbar {
+    width: 3500px;
+    position: fixed;
+    background: white;
+    padding: 0;
+  }
+  .navbar .nav__lista {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    margin-left: -300px;
+    margin-right: 800px;
+    margin-top: 230px;
+    -webkit-transition: all 0.7s;
+    transition: all 0.7s;
+  }
+  .navbar .nav__lista li {
+    width: 550px;
+    height: 48px;
+    padding: 15px;
+    background: #0000ff;
+    margin-left: -47%;
+  }
+  .navbar .nav__lista li .nav__items {
+    color: white;
+    font-size: 16px;
+  }
+  .nav__items:hover {
+    border-bottom: 0;
+  }
+  #btn-menu:checked ~ .nav__lista {
+    margin-left: 97px;
+  }
+  /*Estilos sección de episodios*/
+  .episodes {
+    height: 1100px;
+  }
+  .episodes .episodes__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 12rem;
+  }
+  .episodes .episodes__container .episodes__podcast {
+    padding-bottom: 0;
+  }
+  .episodes .episodes__container .episodes__podcast img {
+    padding-bottom: 5px;
+  }
+  .container__info {
+    margin-right: 1rem;
+  }
+  .container__info .phone {
+    margin-left: 5%;
+  }
+  .container__info .subtitle {
+    width: 410px;
+    height: 62px;
+    margin-bottom: 18%;
+  }
+  .container__info .presentation {
+    width: 350px;
+    height: 204px;
+    text-align: justify;
+    line-height: 32px;
+    font-size: 1rem;
+  }
+  /*Estilos Invitadas/os estelares*/
+  .guests {
+    padding-top: 0;
+  }
+  .guests .guests__grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .guests .guests__grid .guests_img {
+    width: auto;
+    height: auto;
+    margin-left: 8%;
+  }
+}
+
+/* Media querie tamaño 425px*/
+@media (max-width: 426px) {
+  /*Sección de encabezado*/
+  .navbar .nav__lista li {
+    width: 427px;
+    background: #0000ec;
+  }
+  .container .navbar label {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    float: right;
+    height: 80px;
+    padding: 0px 10px 0 0;
+    margin-left: 350px;
+  }
+  .container .header__container .header_texts {
+    width: 18.8rem;
+  }
+  .container .header__container .header_texts .header__paragraph {
+    width: 18.7rem;
+  }
+  .container .header__container .header_texts .header__cta {
+    margin-top: 8.5rem;
+    width: 320px;
+  }
+  /*Sección de episodios*/
+  .episodes .episodes__container {
+    margin-right: 380px;
+  }
+  .episodes .episodes__container .episodes__podcast img {
+    width: 440px;
+    height: 220px;
+  }
+  /*Sección de dónde venimos*/
+  .container__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container__info .informationPodcast {
+    margin-left: 50px;
+    margin-bottom: 100px;
+  }
+  /*Sección de invitados estelares*/
+  .guests {
+    padding-top: 0;
+  }
+  .guests .guests__grid {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .guests .guests__grid .guests_img {
+    height: 320px;
+    margin: 0;
+  }
+  /*Estilos nuestros temas*/
+  .topics__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .topics__container .topics__items {
+    padding-bottom: 60px;
+    margin-left: 60px;
+  }
+  .topics__container .topics__items .topics__image {
+    margin-left: 30%;
+  }
+  .topics__container .topics__items .legend__topics {
+    width: 400px;
+  }
+  /*Estilos sección novedades*/
+  .news .subtitle {
+    text-align: center;
+  }
+  /*Estilos Sección footer*/
+  .footer {
+    padding: 50px 0 50px 0;
+  }
+  .footer__contact {
+    width: 300px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 65px;
+  }
+  .footer__contact p {
+    padding-bottom: 20px;
+  }
+  #btn-menu:checked ~ .nav__lista {
+    margin-left: 430px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,7 +6,7 @@
 /*Estilos sección de episodios*/
 .episodes {
   background: $primary-color;
-  height: 800px;
+  height: 900px;
   h2 {
     padding-left: 10%;
     padding-bottom: 15px;
@@ -30,6 +30,21 @@
 .container {
   padding-top: 125px;
 }
+// .episodes_wave_top {
+//   position: absolute;
+//   bottom: -60px;
+//   width: 1200px;
+//   height: 10vw;
+//   background-color: red;
+
+//   // background-color: red;
+// }
+// .episodes_wave_top {
+//   position: absolute;
+//   // background-color: red;
+//   width: 100%;
+//   height: 6.4vw;
+// }
 
 /*Estilos sección De dónde venimos*/
 
@@ -99,6 +114,7 @@
       padding-right: 12%;
       padding-top: 30px;
       text-align: center;
+      font-family: $font-primary;
     }
   }
 }
