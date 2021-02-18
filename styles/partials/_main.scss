@@ -153,5 +153,9 @@ svg {
     text-decoration: none;
     color: $secondary-color;
     font-weight: bold;
+    &:hover {
+      background: $gradient-button;
+      color: $bg;
+    }
   }
 }

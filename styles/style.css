@@ -120,6 +120,7 @@ input {
 
 .header__container .header_texts .header__cta:hover {
   background: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+  color: white;
 }
 
 .header__container .header__title {
@@ -349,6 +350,11 @@ svg {
   text-decoration: none;
   color: black;
   font-weight: bold;
+}
+
+.news .news__cta:hover {
+  background: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+  color: white;
 }
 
 /*Estilos footer*/

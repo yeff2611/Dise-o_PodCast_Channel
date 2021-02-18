@@ -68,6 +68,7 @@ input {
       font-weight: bold;
       &:hover {
         background: $gradient-button;
+        color: $bg;
       }
     }
   }
