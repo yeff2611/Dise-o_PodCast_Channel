@@ -24,8 +24,11 @@ body p {
 .container {
   margin: 0 auto;
   overflow: hidden;
-  padding: 80px 0;
   max-width: 1200px;
+}
+
+header {
+  margin-bottom: 60px;
 }
 
 header .container {
@@ -52,6 +55,7 @@ input {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 8px;
+  z-index: 1;
 }
 
 .navbar .nav__lista {
@@ -76,8 +80,14 @@ input {
   font-weight: bold;
 }
 
-.nav__items:hover {
-  border-bottom: 2.5px solid #0000ff;
+.navbar .nav__lista .nav__items:hover {
+  text-decoration: line-through;
+  color: #00f3bb;
+}
+
+.navbar .nav__lista .nav__items:active {
+  color: #828591;
+  text-decoration: line-through;
 }
 
 .header__container {
@@ -106,6 +116,10 @@ input {
   text-decoration: none;
   color: black;
   font-weight: bold;
+}
+
+.header__container .header_texts .header__cta:hover {
+  background: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
 }
 
 .header__container .header__title {
@@ -145,13 +159,33 @@ input {
   font-size: 3rem;
 }
 
+svg {
+  position: absolute;
+  width: 1200px;
+  height: 8.9vw;
+}
+
 /*Estilos sección de episodios*/
+.container {
+  padding-top: 0;
+}
+
 .episodes {
-  background: #0000ff;
-  height: 900px;
+  background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  height: 950px;
+}
+
+.episodes .oblicuo-bottom {
+  top: 1305px;
+  height: 7vw;
+}
+
+.episodes .oblicuo-top {
+  top: 430px;
 }
 
 .episodes h2 {
+  margin-top: 130px;
   padding-left: 10%;
   padding-bottom: 15px;
   color: white;
@@ -163,31 +197,26 @@ input {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-items: space-between;
 }
 
 .episodes .episodes__container .episodes__podcast {
-  width: 40%;
-  padding-bottom: 45px;
+  width: 500px;
+  height: 260px;
+  padding: 45px;
 }
 
-.episodes .episodes__container .episodes__podcast img {
-  width: 485px;
-  height: 200px;
-}
-
-.container {
-  padding-top: 125px;
+.episodes .episodes__container .episodes__podcast iframe {
+  width: 500px;
+  height: 250px;
+  padding-right: 40px;
+  margin-left: 50px;
 }
 
 /*Estilos sección De dónde venimos*/
 .info {
   padding-top: 0;
+  height: 500px;
 }
 
 .container__info {
@@ -200,16 +229,22 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 30%;
+  margin-top: 20px;
 }
 
 .container__info .phone {
-  width: 457.6px;
+  position: absolute;
+  width: 420px;
   height: 660px;
+  right: 0;
+  left: 15%;
 }
 
 .container__info .subtitle {
   width: 430px;
   height: 62px;
+  margin-top: 20px;
 }
 
 .container__info .presentation {
@@ -252,8 +287,13 @@ input {
 }
 
 /*Estilos nuestros temas*/
+.topics {
+  height: 500px;
+}
+
 .topics .subtitle {
   padding: 0 0 65px 10%;
+  margin-top: 50px;
 }
 
 .topics .topics__container {
@@ -289,11 +329,13 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #0000ff;
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  height: 500px;
 }
 
 .news h2 {
   color: white;
+  margin-top: 200px;
 }
 
 .news .news__cta {
@@ -341,10 +383,18 @@ input {
 
 /* Media querie tamaño 1024px*/
 @media (max-width: 1024px) {
+  svg {
+    width: 1024px;
+  }
+  .episodes .oblicuo-bottom {
+    top: 1366px;
+  }
+  .episodes .oblicuo-top {
+    top: 466px;
+  }
   .container {
     margin: 0 auto;
     overflow: hidden;
-    padding: 50px 0;
   }
   .navbar {
     height: 80px;
@@ -354,8 +404,31 @@ input {
     margin-right: 30px;
   }
   /*Estilos sección de episodios*/
-  .episodes .episodes__container .episodes__podcast img {
-    padding-right: 40px;
+  .episodes .episodes__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .episodes .episodes__container .episodes__podcast {
+    width: 410px;
+    height: 250px;
+    padding: 0;
+  }
+  .episodes .episodes__container .episodes__podcast iframe {
+    width: 450px;
+    padding-right: 10px;
+    margin: 0;
+  }
+  /*Estilos sección de donde venimos*/
+  .info .container__info .phone {
+    left: 0;
   }
   /*Estilos Invitadas/os estelares*/
   .guests {
@@ -368,10 +441,22 @@ input {
   .guests .guests__grid .guests_img {
     width: 32rem;
   }
+  .news .oblicuo-news {
+    top: 3494.5px;
+  }
 }
 
 /* Media querie tamaño 768px*/
 @media (max-width: 768px) {
+  .episodes svg {
+    width: 768px;
+  }
+  .episodes .oblicuo-top {
+    top: 457px;
+  }
+  .episodes .oblicuo-bottom {
+    top: 1768.5px;
+  }
   /*Menú Hamburguesa*/
   .img__menu {
     width: 35px;
@@ -433,7 +518,10 @@ input {
   }
   /*Estilos sección de episodios*/
   .episodes {
-    height: 1100px;
+    height: 1350px;
+  }
+  .episodes h2 {
+    margin-top: 90px;
   }
   .episodes .episodes__container {
     display: -webkit-box;
@@ -446,19 +534,22 @@ input {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-right: 12rem;
+    margin-right: 70px;
   }
   .episodes .episodes__container .episodes__podcast {
     padding-bottom: 0;
   }
-  .episodes .episodes__container .episodes__podcast img {
-    padding-bottom: 5px;
+  .episodes .episodes__container .episodes__podcast iframe {
+    width: 550px;
+    height: 500px;
   }
+  /*Estilos sección de donde venimos*/
   .container__info {
     margin-right: 1rem;
+    margin-left: 425px;
   }
   .container__info .phone {
-    margin-left: 5%;
+    left: 0;
   }
   .container__info .subtitle {
     width: 410px;
@@ -476,6 +567,9 @@ input {
   .guests {
     padding-top: 0;
   }
+  .guests .guests__images {
+    margin-top: 50px;
+  }
   .guests .guests__grid {
     display: -ms-grid;
     display: grid;
@@ -487,10 +581,26 @@ input {
     height: auto;
     margin-left: 8%;
   }
+  .news .oblicuo-news {
+    top: 5890px;
+    width: 768px;
+  }
 }
 
 /* Media querie tamaño 425px*/
 @media (max-width: 426px) {
+  header {
+    margin-bottom: 50px;
+  }
+  .episodes svg {
+    width: 426px;
+  }
+  .episodes .oblicuo-top {
+    top: 658px;
+  }
+  .episodes .oblicuo-bottom {
+    top: 1987.5px;
+  }
   /*Sección de encabezado*/
   .navbar .nav__lista li {
     width: 427px;
@@ -518,21 +628,28 @@ input {
   /*Sección de episodios*/
   .episodes .episodes__container {
     margin-right: 380px;
+    margin-left: 7px;
   }
-  .episodes .episodes__container .episodes__podcast img {
-    width: 440px;
-    height: 220px;
+  .episodes .episodes__container .episodes__podcast {
+    width: 300px;
+  }
+  .episodes .episodes__container .episodes__podcast iframe {
+    width: 422px;
   }
   /*Sección de dónde venimos*/
+  .info {
+    height: 1060px;
+  }
   .container__info {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: inline;
+    margin-left: 470px;
+  }
+  .container__info .phone {
+    top: 1900px;
   }
   .container__info .informationPodcast {
-    margin-left: 50px;
-    margin-bottom: 100px;
+    margin-left: 40px;
+    margin-top: 550px;
   }
   /*Sección de invitados estelares*/
   .guests {
@@ -547,6 +664,9 @@ input {
     margin: 0;
   }
   /*Estilos nuestros temas*/
+  .topics {
+    height: 1150px;
+  }
   .topics__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -564,7 +684,12 @@ input {
     width: 400px;
   }
   /*Estilos sección novedades*/
+  .news .oblicuo-news {
+    top: 6369px;
+    width: 425px;
+  }
   .news .subtitle {
+    margin-top: 115px;
     text-align: center;
   }
   /*Estilos Sección footer*/
