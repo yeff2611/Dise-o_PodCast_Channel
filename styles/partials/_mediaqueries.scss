@@ -1,0 +1,362 @@
+@media (min-width: 769px) {
+  // input {
+  //   display: none;
+  // }
+  .img__menu {
+    display: none;
+  }
+}
+
+/* Media querie tamaño 1024px*/
+@media (max-width: 1024px) {
+  svg {
+    width: 1024px;
+  }
+  .episodes {
+    .oblicuo-bottom {
+      top: 1366px;
+    }
+    .oblicuo-top {
+      top: 466px;
+    }
+  }
+
+  .container {
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .navbar {
+    height: 80px;
+    width: 1000px;
+    .nav__lista {
+      margin-right: 30px;
+    }
+  }
+
+  /*Estilos sección de episodios*/
+  .episodes {
+    .episodes__container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      .episodes__podcast {
+        width: 410px;
+        height: 250px;
+        padding: 0;
+        iframe {
+          width: 450px;
+          padding-right: 10px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  /*Estilos sección de donde venimos*/
+  .info {
+    .container__info {
+      .phone {
+        left: 0;
+      }
+    }
+  }
+
+  /*Estilos Invitadas/os estelares*/
+  .guests {
+    padding-top: 0;
+    .guests__grid {
+      grid-template-columns: repeat(2, 1fr);
+      .guests_img {
+        width: 32rem;
+      }
+    }
+  }
+
+  .news {
+    .oblicuo-news {
+      top: 3494.5px;
+    }
+  }
+}
+
+/* Media querie tamaño 768px*/
+@media (max-width: 768px) {
+  .episodes {
+    svg {
+      width: 768px;
+    }
+    .oblicuo-top {
+      top: 457px;
+    }
+    .oblicuo-bottom {
+      top: 1768.5px;
+    }
+  }
+  /*Menú Hamburguesa*/
+  .img__menu {
+    width: 35px;
+    display: block;
+    margin-right: 1%;
+  }
+  .header {
+    .container {
+      .header__container {
+        margin-top: 140px;
+        .header_texts {
+          margin-left: 45px;
+        }
+      }
+      label {
+        display: inline-flex;
+        float: right;
+        height: 80px;
+        padding: 0px 10px 0 0;
+        margin-left: 685px;
+      }
+      input {
+        float: right;
+      }
+    }
+  }
+  .navbar {
+    width: 3500px;
+    position: fixed;
+    background: $bg;
+    padding: 0;
+    .nav__lista {
+      flex-direction: column;
+      width: 80%;
+      margin-left: -300px;
+      margin-right: 800px;
+      margin-top: 230px;
+      transition: all 0.7s;
+      li {
+        width: 550px;
+        height: 48px;
+        padding: 15px;
+        background: $primary-color;
+        margin-left: -47%;
+        .nav__items {
+          color: $bg;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .nav__items {
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+  #btn-menu:checked ~ .nav__lista {
+    margin-left: 97px;
+  }
+
+  /*Estilos sección de episodios*/
+
+  .episodes {
+    height: 1350px;
+    h2 {
+      margin-top: 90px;
+    }
+    .episodes__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: 70px;
+      .episodes__podcast {
+        padding-bottom: 0;
+        iframe {
+          width: 550px;
+          height: 500px;
+        }
+      }
+    }
+  }
+  /*Estilos sección de donde venimos*/
+  .container__info {
+    margin-right: 1rem;
+    margin-left: 425px;
+    .phone {
+      left: 0;
+    }
+
+    .subtitle {
+      width: 410px;
+      height: 62px;
+      margin-bottom: 18%;
+    }
+    .presentation {
+      width: 350px;
+      height: 204px;
+      text-align: justify;
+      line-height: 32px;
+      font-size: 1rem;
+    }
+  }
+
+  /*Estilos Invitadas/os estelares*/
+  .guests {
+    .guests__images {
+      margin-top: 50px;
+    }
+    padding-top: 0;
+    .guests__grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      .guests_img {
+        width: auto;
+        height: auto;
+
+        margin-left: 8%;
+      }
+    }
+  }
+
+  .news {
+    .oblicuo-news {
+      top: 5890px;
+      width: 768px;
+    }
+  }
+}
+
+/* Media querie tamaño 425px*/
+@media (max-width: 426px) {
+  header {
+    margin-bottom: 50px;
+  }
+  .episodes {
+    svg {
+      width: 426px;
+    }
+    .oblicuo-top {
+      top: 658px;
+    }
+    .oblicuo-bottom {
+      top: 1987.5px;
+    }
+  }
+
+  /*Sección de encabezado*/
+  .navbar {
+    .nav__lista {
+      li {
+        width: 427px;
+        background: $third-color;
+      }
+    }
+  }
+  .container {
+    .navbar {
+      label {
+        display: inline-flex;
+        float: right;
+        height: 80px;
+        padding: 0px 10px 0 0;
+        margin-left: 350px;
+      }
+    }
+    .header__container {
+      .header_texts {
+        width: 18.8rem;
+        .header__paragraph {
+          width: 18.7rem;
+        }
+        .header__cta {
+          margin-top: 8.5rem;
+          width: 320px;
+        }
+      }
+    }
+  }
+
+  /*Sección de episodios*/
+
+  .episodes {
+    .episodes__container {
+      margin-right: 380px;
+      margin-left: 7px;
+      .episodes__podcast {
+        width: 300px;
+        iframe {
+          width: 422px;
+        }
+      }
+    }
+  }
+  /*Sección de dónde venimos*/
+  .info {
+    height: 1060px;
+  }
+  .container__info {
+    display: inline;
+    margin-left: 470px;
+    .phone {
+      top: 1900px;
+    }
+    .informationPodcast {
+      // width: 350px;
+      margin-left: 40px;
+      margin-top: 550px;
+    }
+  }
+  /*Sección de invitados estelares*/
+  .guests {
+    padding-top: 0;
+    .guests__grid {
+      grid-template-columns: repeat(1, 1fr);
+      .guests_img {
+        height: 320px;
+        margin: 0;
+      }
+    }
+  }
+
+  /*Estilos nuestros temas*/
+  .topics {
+    height: 1150px;
+  }
+  .topics__container {
+    flex-direction: column;
+    .topics__items {
+      padding-bottom: 60px;
+      margin-left: 60px;
+      .topics__image {
+        margin-left: 30%;
+      }
+      .legend__topics {
+        width: 400px;
+      }
+    }
+  }
+
+  /*Estilos sección novedades*/
+  .news {
+    .oblicuo-news {
+      top: 6369px;
+      width: 425px;
+    }
+    .subtitle {
+      margin-top: 115px;
+      text-align: center;
+    }
+  }
+
+  /*Estilos Sección footer*/
+  .footer {
+    padding: 50px 0 50px 0;
+  }
+  .footer__contact {
+    width: 300px;
+    flex-direction: column;
+    margin-left: 65px;
+    p {
+      padding-bottom: 20px;
+    }
+  }
+  #btn-menu:checked ~ .nav__lista {
+    margin-left: 430px;
+  }
+}

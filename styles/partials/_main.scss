@@ -1,0 +1,157 @@
+.subtitle {
+  color: $secondary-color;
+  font-size: 3rem;
+}
+svg {
+  position: absolute;
+  width: 1200px;
+  height: 8.9vw;
+}
+
+/*Estilos sección de episodios*/
+.container {
+  padding-top: 0;
+}
+.episodes {
+  background: $gradient-color;
+  height: 950px;
+
+  .oblicuo-bottom {
+    top: 1305px;
+    height: 7vw;
+  }
+  .oblicuo-top {
+    top: 430px;
+  }
+  h2 {
+    margin-top: 130px;
+    padding-left: 10%;
+    padding-bottom: 15px;
+    color: $bg;
+  }
+  .episodes__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: space-between;
+    .episodes__podcast {
+      width: 500px;
+      height: 260px;
+      padding: 45px;
+
+      iframe {
+        width: 500px;
+        height: 250px;
+        padding-right: 40px;
+        margin-left: 50px;
+      }
+    }
+  }
+}
+
+/*Estilos sección De dónde venimos*/
+
+.info {
+  padding-top: 0;
+  height: 500px;
+}
+.container__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30%;
+  margin-top: 20px;
+  .phone {
+    position: absolute;
+    width: 420px;
+    height: 660px;
+    right: 0;
+    left: 15%;
+  }
+  .subtitle {
+    width: 430px;
+    height: 62px;
+    margin-top: 20px;
+  }
+  .presentation {
+    width: 500px;
+    height: 204px;
+    text-align: justify;
+    line-height: 32px;
+  }
+}
+
+/*Estilos Invitadas/os estelares*/
+.guests {
+  padding-top: 0;
+  .guests__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: 1fr 1fr 1fr;
+    .guests_img {
+      width: auto;
+      height: 320px;
+      display: flex;
+      align-content: center;
+    }
+  }
+}
+
+.guests__images {
+  .subtitle {
+    padding-bottom: 55px;
+    padding-left: 10%;
+  }
+}
+
+/*Estilos nuestros temas*/
+.topics {
+  padding-top: 0;
+}
+
+/*Estilos nuestros temas*/
+.topics {
+  height: 500px;
+  .subtitle {
+    padding: 0 0 65px 10%;
+    margin-top: 50px;
+  }
+  .topics__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .legend__topics {
+      width: 150px;
+      height: 50px;
+      padding-right: 12%;
+      padding-top: 30px;
+      text-align: center;
+      font-family: $font-primary;
+    }
+  }
+}
+
+/*Estilos Novedades*/
+.news {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  // background: $primary-color;
+  background-image: $gradient-color;
+  height: 500px;
+  h2 {
+    color: $bg;
+    margin-top: 200px;
+  }
+  .news__cta {
+    display: inline-block;
+    margin-top: 35px;
+    width: 345px;
+    height: 56px;
+    background-color: $boton-color;
+    padding: $boton-padding;
+    text-align: center;
+    text-decoration: none;
+    color: $secondary-color;
+    font-weight: bold;
+  }
+}
