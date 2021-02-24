@@ -6,7 +6,6 @@
     display: none;
   }
 }
-
 /* Media querie tamaño 1024px*/
 @media (max-width: 1024px) {
   svg {
@@ -20,12 +19,10 @@
       top: 466px;
     }
   }
-
   .container {
     margin: 0 auto;
     overflow: hidden;
   }
-
   .navbar {
     height: 80px;
     width: 1000px;
@@ -33,7 +30,6 @@
       margin-right: 30px;
     }
   }
-
   /*Estilos sección de episodios*/
   .episodes {
     .episodes__container {
@@ -52,7 +48,6 @@
       }
     }
   }
-
   /*Estilos sección de donde venimos*/
   .info {
     .container__info {
@@ -61,25 +56,22 @@
       }
     }
   }
-
   /*Estilos Invitadas/os estelares*/
   .guests {
     padding-top: 0;
     .guests__grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
       .guests_img {
         width: 32rem;
       }
     }
   }
-
   .news {
     .oblicuo-news {
       top: 3494.5px;
     }
   }
 }
-
 /* Media querie tamaño 768px*/
 @media (max-width: 768px) {
   .episodes {
@@ -152,9 +144,7 @@
   #btn-menu:checked ~ .nav__lista {
     margin-left: 97px;
   }
-
   /*Estilos sección de episodios*/
-
   .episodes {
     height: 1350px;
     h2 {
@@ -181,7 +171,6 @@
     .phone {
       left: 0;
     }
-
     .subtitle {
       width: 410px;
       height: 62px;
@@ -195,7 +184,6 @@
       font-size: 1rem;
     }
   }
-
   /*Estilos Invitadas/os estelares*/
   .guests {
     .guests__images {
@@ -204,16 +192,14 @@
     padding-top: 0;
     .guests__grid {
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: 1fr;
       .guests_img {
         width: auto;
         height: auto;
-
         margin-left: 8%;
       }
     }
   }
-
   .news {
     .oblicuo-news {
       top: 5890px;
@@ -221,7 +207,6 @@
     }
   }
 }
-
 /* Media querie tamaño 425px*/
 @media (max-width: 426px) {
   header {
@@ -238,7 +223,6 @@
       top: 1987.5px;
     }
   }
-
   /*Sección de encabezado*/
   .navbar {
     .nav__lista {
@@ -271,9 +255,7 @@
       }
     }
   }
-
   /*Sección de episodios*/
-
   .episodes {
     .episodes__container {
       margin-right: 380px;
@@ -306,14 +288,12 @@
   .guests {
     padding-top: 0;
     .guests__grid {
-      grid-template-columns: repeat(1, 1fr);
       .guests_img {
         height: 320px;
         margin: 0;
       }
     }
   }
-
   /*Estilos nuestros temas*/
   .topics {
     height: 1150px;
@@ -331,7 +311,6 @@
       }
     }
   }
-
   /*Estilos sección novedades*/
   .news {
     .oblicuo-news {
@@ -343,7 +322,6 @@
       text-align: center;
     }
   }
-
   /*Estilos Sección footer*/
   .footer {
     padding: 50px 0 50px 0;

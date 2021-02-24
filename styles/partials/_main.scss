@@ -7,7 +7,6 @@ svg {
   width: 1200px;
   height: 8.9vw;
 }
-
 /*Estilos sección de episodios*/
 .container {
   padding-top: 0;
@@ -32,7 +31,7 @@ svg {
   .episodes__container {
     display: flex;
     flex-wrap: wrap;
-    justify-items: space-between;
+    justify-items: center;
     .episodes__podcast {
       width: 500px;
       height: 260px;
@@ -43,13 +42,13 @@ svg {
         height: 250px;
         padding-right: 40px;
         margin-left: 50px;
+        border: 0;
+        background-color: transparent;
       }
     }
   }
 }
-
 /*Estilos sección De dónde venimos*/
-
 .info {
   padding-top: 0;
   height: 500px;
@@ -79,14 +78,13 @@ svg {
     line-height: 32px;
   }
 }
-
 /*Estilos Invitadas/os estelares*/
 .guests {
   padding-top: 0;
   .guests__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    // grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     .guests_img {
       width: auto;
       height: 320px;
@@ -95,19 +93,16 @@ svg {
     }
   }
 }
-
 .guests__images {
   .subtitle {
     padding-bottom: 55px;
     padding-left: 10%;
   }
 }
-
 /*Estilos nuestros temas*/
 .topics {
   padding-top: 0;
 }
-
 /*Estilos nuestros temas*/
 .topics {
   height: 500px;
@@ -129,7 +124,6 @@ svg {
     }
   }
 }
-
 /*Estilos Novedades*/
 .news {
   display: flex;
